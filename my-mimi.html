@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mint Green Photo Gallery Carousel</title>
+  <style>
+    :root {
+      --mint-green: #a8e6cf;
+      --dark-mint: #26a69a;
+      --white: #ffffff;
+      --shadow: rgba(0, 0, 0, 0.9);
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--mint-green);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
+
+    h2 {
+      color: var(--dark-mint);
+      margin-bottom: 20px;
+      font-size: 2rem;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .carousel {
+      position: relative;
+      width: 100%;
+      max-width: 900px;
+      height: 500px;
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px var(--shadow);
+      background-color: var(--white);
+    }
+
+    .carousel-images {
+      display: flex;
+      transition: transform 1.5s ease-in-out;
+      height: 100%;
+    }
+
+    .carousel-images img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      flex-shrink: 0;
+      background-color: #00221f;
+    }
+
+    .carousel-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(38, 166, 154, 0.8);
+      color: white;
+      border: none;
+      font-size: 2rem;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      z-index: 10;
+      border-radius: 10px;
+      transition: background-color 0.3s;
+    }
+
+    .carousel-button:hover {
+      background-color: rgba(38, 166, 154, 1);
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+
+    .credit {
+      margin-top: 20px;
+      color: #555;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      .carousel {
+        height: 300px;
+        border-radius: 12px;
+      }
+
+      .carousel-button {
+        font-size: 1.5rem;
+        padding: 0.3rem 0.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h2 style="
+    font-family: 'Georgia', serif;
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 20px 0 10px;
+    color: #333;">
+    In Loving Memory of
+  </h2>
+
+  <h2 style="
+    font-family: 'Times New Roman', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin: 0 0 -10px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);">
+    Rosellie J. Colandog
+  </h2>
+
+  <p style="
+    font-style: italic;
+    font-size: 1.3rem;
+    color: #555;
+    margin-bottom: 20px;">
+    &#x28;1996 &ndash; 2024&#x29;
+  </p>
+
+  <div class="carousel">
+    <div class="carousel-images" id="carouselImages">
+      <img src="img/mimi (1).jpg" alt="mimi1">
+      <img src="img/mimi (2).jpg" alt="mimi2">
+      <img src="img/mimi (3).jpg" alt="mimi3">
+      <img src="img/mimi (4).jpg" alt="mimi4">
+      <img src="img/mimi (5).jpg" alt="mimi5">
+      <img src="img/mimi (6).jpg" alt="mimi6">
+      <img src="img/mimi (7).jpg" alt="mimi7">
+      <img src="img/mimi (8).jpg" alt="mimi8">
+      <img src="img/mimi (9).jpg" alt="mimi9">
+      <img src="img/mimi (10).jpg" alt="mimi10">
+      <img src="img/mimi (11).jpg" alt="mimi11">
+      <img src="img/mimi (12).jpg" alt="mimi12">
+      <img src="img/mimi (13).jpg" alt="mimi13">
+      <img src="img/mimi (14).jpg" alt="mimi14">
+      <img src="img/mimi (15).jpg" alt="mimi15">
+      <img src="img/mimi (16).jpg" alt="mimi16">
+      <img src="img/mimi (17).jpg" alt="mimi17">
+      <img src="img/mimi (18).jpg" alt="mimi18">
+      <img src="img/mimi (19).jpg" alt="mimi19">
+      <img src="img/mimi (20).jpg" alt="mimi20">
+      <img src="img/mimi (21).jpg" alt="mimi21">
+      <img src="img/mimi (22).jpg" alt="mimi22">
+      <img src="img/mimi (23).jpg" alt="mimi23">
+      <img src="img/mimi (24).jpg" alt="mimi24">
+      <img src="img/mimi (25).jpg" alt="mimi25">
+      <img src="img/mimi (26).jpg" alt="mimi26">
+      <img src="img/mimi (27).jpg" alt="mimi27">
+      <img src="img/mimi (28).jpg" alt="mimi28">
+      <img src="img/mimi (29).jpg" alt="mimi29">
+      <img src="img/mimi (30).jpg" alt="mimi30">
+      <img src="img/mimi (31).jpg" alt="mimi31">
+      <img src="img/mimi (32).jpg" alt="mimi32">
+      <img src="img/mimi (33).jpg" alt="mimi33">
+      <img src="img/mimi (34).jpg" alt="mimi34">
+      <img src="img/mimi (35).jpg" alt="mimi35">
+      <img src="img/mimi (36).jpg" alt="mimi36">
+      <img src="img/mimi (37).jpg" alt="mimi37">
+      <img src="img/mimi (38).jpg" alt="mimi38">
+      <img src="img/mimi (39).jpg" alt="mimi39">
+      <img src="img/mimi (40).jpg" alt="mimi40">
+      <img src="img/mimi (41).jpg" alt="mimi41">
+      <img src="img/mimi (42).jpg" alt="mimi42">
+      <img src="img/mimi (43).jpg" alt="mimi43">
+      <img src="img/mimi (44).jpg" alt="mimi44">
+      <img src="img/mimi (45).jpg" alt="mimi45">
+      <img src="img/mimi (46).jpg" alt="mimi46">
+      <img src="img/mimi (47).jpg" alt="mimi47">
+      <img src="img/mimi (48).jpg" alt="mimi48">
+      <img src="img/mimi (49).jpg" alt="mimi49">
+      <img src="img/mimi (50).jpg" alt="mimi50">
+      <img src="img/mimi (51).jpg" alt="mimi51">
+      <img src="img/mimi (52).jpg" alt="mimi52">
+      <img src="img/mimi (53).jpg" alt="mimi53">
+      <img src="img/mimi (54).jpg" alt="mimi54">
+      <img src="img/mimi (55).jpg" alt="mimi55">
+      <img src="img/mimi (56).jpg" alt="mimi56">
+      <img src="img/mimi (57).jpg" alt="mimi57">
+      <img src="img/mimi (58).jpg" alt="mimi58">
+      <img src="img/mimi (59).jpg" alt="mimi59">
+      <img src="img/mimi (60).jpg" alt="mimi60">
+      <img src="img/mimi (61).jpg" alt="mimi61">
+      <img src="img/mimi (62).jpg" alt="mimi62">
+      <img src="img/mimi (63).jpg" alt="mimi63">
+    </div>
+    <button class="carousel-button prev" id="prevBtn">&#10094;</button>
+    <button class="carousel-button next" id="nextBtn">&#10095;</button>
+  </div>
+
+  <audio id="bgMusic" autoplay loop>
+    <source src="audio/I Need You.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <blockquote style="
+  font-style: italic;
+  font-family: 'Georgia', serif;
+  font-size: .9rem;
+  color: #444;
+  margin: 10px auto;
+  padding: 20px;
+  max-width: 600px;
+  text-align: justify;">
+  <em>“Once given so deeply, love never fades and never loses its place—it lives on in every heartbeat and every memory. The bond we share is eternal, beyond time and space. Our connection transcends both life and death, leaving only remnants between us. We were destined to cross paths, but not bound by fate to stay. Until we meet again, for now, I shall live, love, and carry you in my heart forever.”</em>
+</blockquote>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      const audio = document.getElementById('bgMusic');
+
+      function enableAudio() {
+        audio.play().catch(() => {
+          console.log("Autoplay prevented until user interacts.");
+        });
+        document.removeEventListener('click', enableAudio);
+      }
+
+      document.addEventListener('click', enableAudio);
+    });
+
+    const carouselImages = document.getElementById('carouselImages');
+    const images = document.querySelectorAll('.carousel-images img');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let index = 0;
+    let interval = setInterval(nextImage, 4500);
+
+    function showImage(i) {
+      carouselImages.style.transform = `translateX(-${i * 100}%)`;
+    }
+
+    function nextImage() {
+      index = (index + 1) % images.length;
+      showImage(index);
+    }
+
+    function prevImage() {
+      index = (index - 1 + images.length) % images.length;
+      showImage(index);
+    }
+
+    nextBtn.addEventListener('click', () => {
+      nextImage();
+      resetInterval();
+    });
+
+    prevBtn.addEventListener('click', () => {
+      prevImage();
+      resetInterval();
+    });
+
+    function resetInterval() {
+      clearInterval(interval);
+      interval = setInterval(nextImage, 4500);
+    }
+  </script>
+</body>
+</html>
