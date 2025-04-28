@@ -226,19 +226,22 @@
   <em>“Captured smiles, speaking eyes, secret verses — unknown to anyone, a language only my heart can read. Once given so deeply, love never fades and never loses its place—it lives on in every heartbeat and every memory. The bond we share is eternal, beyond time and space. Our connection transcends both life and death, leaving only remnants between us. We were destined to cross paths, but not bound by fate to stay. For now, I shall live, love, and carry you in my heart forever, until we meet again.”</em>
 </blockquote>
 
-  <script>
-    window.addEventListener('DOMContentLoaded', function () {
-      const audio = document.getElementById('bgMusic');
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    const audio = document.getElementById('bgMusic');
+    let audioEnabled = false;
 
-      function enableAudio() {
+    function enableAudio() {
+      if (!audioEnabled) {
         audio.play().catch(() => {
           console.log("Autoplay prevented until user interacts.");
         });
-        document.removeEventListener('click', enableAudio);
+        audioEnabled = true;
       }
+    }
 
-      document.addEventListener('click', enableAudio);
-    });
+    // Enable audio on any user click
+    document.addEventListener('click', enableAudio);
 
     const carouselImages = document.getElementById('carouselImages');
     const images = document.querySelectorAll('.carousel-images img');
@@ -262,11 +265,13 @@
     }
 
     nextBtn.addEventListener('click', () => {
+      enableAudio(); // Start audio when clicking "Next"
       nextImage();
       resetInterval();
     });
 
     prevBtn.addEventListener('click', () => {
+      enableAudio(); // Start audio when clicking "Previous"
       prevImage();
       resetInterval();
     });
@@ -275,6 +280,7 @@
       clearInterval(interval);
       interval = setInterval(nextImage, 4500);
     }
-  </script>
+  });
+</script>
 </body>
 </html>
